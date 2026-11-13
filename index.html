@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>sweepwarp-lab — camera time warp with swept-chord clearance certificates</title>
+<style>
+  body { margin: 0; font: 14px/1.45 system-ui, sans-serif; background: #10131a; color: #e6e9ef; }
+  #app { position: fixed; inset: 0; }
+  #panel { position: fixed; top: 12px; left: 12px; width: 330px; padding: 14px 16px;
+    background: rgba(18,22,30,.92); border: 1px solid #2c3446; border-radius: 10px; }
+  h1 { font-size: 15px; margin: 0 0 8px; }
+  label { display: block; margin: 8px 0 2px; color: #9fb0c8; }
+  input[type=range] { width: 100%; }
+  .num { font-variant-numeric: tabular-nums; }
+  #readout { margin-top: 10px; padding-top: 8px; border-top: 1px solid #2c3446; }
+  .bad { color: #ff7b72; } .good { color: #74d99f; }
+  a { color: #79b8ff; }
+</style>
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"
+  }
+}
+</script>
+</head>
+<body>
+<div id="app"></div>
+<div id="panel">
+  <h1>sweepwarp-lab</h1>
+  <div>Camera flythrough re-timed so every 60 Hz swept chord clears the near-clip radius.</div>
+  <label>scene</label>
+  <select id="scene"></select>
+  <label>playback speed <span id="speedVal" class="num">1.00×</span></label>
+  <input id="speed" type="range" min="0.5" max="4" step="0.05" value="1" />
+  <label><input id="warp" type="checkbox" checked /> clearance-density time warp</label>
+  <div id="readout" class="num"></div>
+  <div style="margin-top:8px;color:#9fb0c8">Numbers come from <code>src/core.mjs</code>, the same module
+  <code>node bench/verify.mjs</code> asserts.</div>
+</div>
+<script type="module" src="./main.js"></script>
+</body>
+</html>

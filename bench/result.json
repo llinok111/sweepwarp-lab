@@ -1,0 +1,46 @@
+{
+  "generatedBy": "bench/bench.mjs",
+  "generatedAt": "2026-11-13T22:28:42.406Z",
+  "node": "v24.19.0",
+  "timingMsPerAllScenes": {
+    "samples": 11,
+    "repsPerSample": 8,
+    "coldMs": 26.330870628356934,
+    "min": 24.375088691711426,
+    "median": 24.7293159365654,
+    "p95": 25.807944297790527,
+    "stddev": 0.45001932423342267,
+    "relStddevPct": 1.8125999081536233
+  },
+  "samplesMs": [
+    25.807944297790527,
+    25.542322278022766,
+    25.089117407798767,
+    24.586411118507385,
+    24.823357701301575,
+    24.824671506881714,
+    24.375088691711426,
+    24.635274171829224,
+    24.465003967285156,
+    24.412336111068726,
+    24.53859508037567
+  ],
+  "summary": {
+    "scenes": 6,
+    "triangles": 720,
+    "budgetFrames": 203,
+    "budgetViolations": 0,
+    "budgetMinClearance": 0.1219658376989544,
+    "naiveViolations": 17,
+    "naiveIntersections": 11,
+    "minFrames": 67,
+    "uniformSafeFrames": 455,
+    "frameReductionVsUniformPct": 85.27472527472527,
+    "uniformOverBudget": 2.2413793103448274
+  },
+  "provenance": {
+    "data": "data/scenes.json",
+    "core": "src/core.mjs (pure ES module, no three.js/DOM)",
+    "note": "all values measured in this run; README quotes these fields"
+  }
+}
